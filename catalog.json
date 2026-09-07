@@ -1,4 +1,13 @@
 {
   "version": 1,
-  "items": []
+  "items": [
+    {
+      "id": "mac-close-all-windows",
+      "type": "buttons",
+      "title": "Cerrar todas las ventanas (Mac)",
+      "description": "Cierra todas las ventanas visibles de las apps abiertas en el escritorio actual. Requiere permiso de Accesibilidad para Switchboard.",
+      "author": "Switchboard",
+      "path": "buttons/mac-close-all-windows.json"
+    }
+  ]
 }

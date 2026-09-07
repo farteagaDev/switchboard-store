@@ -1,0 +1,18 @@
+{
+  "kind": "streamdeck-export",
+  "version": 1,
+  "type": "buttons",
+  "buttons": [
+    {
+      "label": "Cerrar Ventanas",
+      "color": "#e05c5c",
+      "platform": "mac",
+      "action": {
+        "type": "run_applescript",
+        "params": {
+          "script": "tell application \"System Events\"\n  repeat with proc in (every process whose visible is true)\n    try\n      repeat with w in (every window of proc)\n        try\n          click (first button of w whose subrole is \"AXCloseButton\")\n        end try\n      end repeat\n    end try\n  end repeat\nend tell"
+        }
+      }
+    }
+  ]
+}
