@@ -33,8 +33,12 @@ Cada entrada agregada a `catalog.json` describe un archivo de `buttons/` o `prof
   "title": "Nombre visible",
   "description": "Qué hace",
   "author": "quien lo subió",
-  "path": "buttons/slug-unico.json"
+  "path": "buttons/slug-unico.json",
+  "imageDataUrl": "data:image/png;base64,...",
+  "icon": "Power"
 }
 ```
 
 `id` y `path` deben coincidir con el nombre del archivo real agregado a la carpeta correspondiente.
+
+`imageDataUrl`/`icon` son opcionales — se muestran como miniatura en la lista de la tienda, con la misma prioridad que usa un botón real: imagen primero, ícono como respaldo si no hay imagen. Van directo en el catálogo (no se leen del archivo del botón) para que listar la tienda no tenga que descargar cada archivo, solo `catalog.json`. `icon` debe ser uno de los nombres en `ICON_NAMES` de `src/renderer/src/utils/iconOptions.ts` en el repo de la app.
